@@ -280,7 +280,9 @@ export default function BeneficiaryForm({ departments }: BeneficiaryFormProps) {
           </div>
         </CardContent>
         <CardFooter className="flex justify-end">
-          <Button>Submit</Button>
+          <Button onClick={handleSubmit} type="submit" isLoading={isLoading}>
+            Submit
+          </Button>
         </CardFooter>
       </form>
     </Card>
