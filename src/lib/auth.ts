@@ -8,8 +8,7 @@ import { nextCookies } from "better-auth/next-js";
 import { admin } from "better-auth/plugins";
 import { headers } from "next/headers";
 
-export const baseUrl =
-  new URL(env.VERCEL_URL || "").toString() ?? "http://localhost:3000";
+export const baseUrl = `https://${env.VERCEL_URL}`;
 
 export const auth = betterAuth({
   baseURL: baseUrl,
