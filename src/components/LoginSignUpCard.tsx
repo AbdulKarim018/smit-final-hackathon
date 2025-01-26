@@ -19,6 +19,7 @@ import { Checkbox } from "./ui/checkbox";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
+import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 
 export default function LoginSignUpCard() {
   return (
@@ -76,7 +77,9 @@ export function SignIn() {
   return (
     <Card className="max-w-md">
       <CardHeader>
-        <CardTitle className="text-lg md:text-xl">Sign In</CardTitle>
+        <CardTitle className="text-lg md:text-xl">
+          Sign In <CredentialsPopover />
+        </CardTitle>
         <CardDescription className="text-xs md:text-sm">
           Enter your email below to login to your account
         </CardDescription>
@@ -312,5 +315,40 @@ export function SignUp() {
         </form>
       </CardContent>
     </Card>
+  );
+}
+
+function CredentialsPopover() {
+  return (
+    <Popover>
+      <PopoverTrigger asChild>
+        <Button variant="outline">View Credentials</Button>
+      </PopoverTrigger>
+      <PopoverContent className="w-80">
+        <div className="grid gap-4">
+          <p>
+            Admin:
+            <br />
+            <span className="font-mono">
+              Email: admin@bsm.com Password: bsm12345
+            </span>
+          </p>
+          <p>
+            Receptionist:
+            <br />
+            <span className="font-mono">
+              Email: junaid@bms.com Password: bms12345
+            </span>
+          </p>
+          <p>
+            Admin:
+            <br />
+            <span className="font-mono">
+              Email: admin@bms.com Password: bms12345
+            </span>
+          </p>
+        </div>
+      </PopoverContent>
+    </Popover>
   );
 }
