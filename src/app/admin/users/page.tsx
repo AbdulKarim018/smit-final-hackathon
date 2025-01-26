@@ -3,6 +3,8 @@ import UserTable from "./_components/user-table";
 import { db } from "@/server/db";
 import { auth } from "@/lib/auth";
 
+export const revalidate = 0;
+
 export default async function UsersPage() {
   const users = await db.user.findMany({
     include: {

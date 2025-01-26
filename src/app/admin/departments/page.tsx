@@ -15,6 +15,8 @@ import AddDepartmentModal from "./_components/add-department-modal";
 import DeleteDepartmentModal from "./_components/delete-department-modal";
 import { Separator } from "@/components/ui/separator";
 
+export const revalidate = 0;
+
 export default async function DepartmentsPage() {
   const departments = await db.department.findMany();
   return (
