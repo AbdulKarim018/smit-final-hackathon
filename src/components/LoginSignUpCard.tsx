@@ -344,7 +344,7 @@ function CredentialsPopover() {
             Admin:
             <br />
             <span className="font-mono">
-              Email: admin@bms.com Password: bms12345
+              Email: arsalan@bms.com Password: bms12345
             </span>
           </p>
         </div>
